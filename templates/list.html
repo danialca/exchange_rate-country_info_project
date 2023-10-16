@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Currency Codes</title>
+</head>
+<body>
+    <div class="currency-list">
+        <h2>Currency Codes</h2>
+        <ul>
+            {% for chunk in currency_codes %}
+                <li>{{ chunk | join(', ') }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

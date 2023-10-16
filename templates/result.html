@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Currency Conversion Results</title>
+</head>
+<body>
+    <h1>Currency Conversion Results</h1>
+    <ul>
+        {% for result in results %}
+            <li>
+                {{ result[0] }} {{ result[1] }} = {{ result[2] }} {{ result[3] }}
+                {% if result[4] %}
+                    <ul>
+                        <li>
+                            Target Currency Country Info:
+                            Common Name: {{ result[4][0] }}<br>
+                            Capital: {{ result[4][1] }}
+                        </li>
+                    </ul>
+                {% endif %}
+                {% if result[5] %}
+                    <ul>
+                        <li>
+                            Base Currency Country Info:
+                            Common Name: {{ result[5][0] }}<br>
+                            Capital: {{ result[5][1] }}
+                        </li>
+                    </ul>
+                {% endif %}
+                Exchange Time: {{ current_time }} <!--display the exchange time -->
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+
+
+
